@@ -10,7 +10,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background: rgb(240, 240, 240);
 }
-    
+    body.dark {
+	background: #292C35;
+    }
 html {
     scroll-behavior: smooth;
     height: 100%;
@@ -366,3 +368,42 @@ footer p {
     text-align: center;
 
 }
+.label {
+    background-color: #636161;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    border-radius: 50px;
+    width: 50px;
+    height: 26px;
+    
+}
+
+.bxs-moon{
+    color: yellow;
+
+}
+.bxs-sun {
+    color: #f39c12;
+}
+.ball {
+   background-color: white;
+   border-radius: 50%;
+    position: absolute;
+    top: 6.5px;
+    left: 4px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(30px);
+}
+
